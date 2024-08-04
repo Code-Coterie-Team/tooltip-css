@@ -19,25 +19,25 @@ body{
     background-color: #4CB6DE;
     width:40rem;
     height: 40rem;
-    position: relative;
+    display: flex;
+    align-items: center;
+
 
 }
 
 .main{
-   width: 30rem;
-   height: 15rem;
    font-size: 2.4rem;
    color: white;
-   position: absolute;
-   left: 2rem;
-   top: 7rem;
+   padding: 2rem;
+   
 
    
 }
 .paragraph{
     line-height: 3.5rem;
     font-family: "Open Sans", Helvetica, sans-serif;
-    z-index: 1;
+    position: relative;
+    z-index: 2;
 }
 .tooltip{
     background-color: rgb(40, 111, 138);
@@ -48,13 +48,13 @@ body{
 }
 
 .tooltip .tooltiptext {
-    visibility: hidden;
+    
     width: 28rem;
     height: 12rem;
     font-size: 1.6rem;
     position: absolute;
     z-index: 1;
-    bottom: 140%;
+    bottom: 4rem;
     left:0;
     margin-left: -90px;
     background-color:rgb(40, 111, 138) ;
@@ -88,7 +88,6 @@ body{
     border-color: rgb(40, 111, 138)  transparent transparent transparent;
   }
   .tooltip:hover .tooltiptext {
-    visibility: visible;
     opacity: 1;
   }
  footer{
@@ -97,9 +96,14 @@ body{
  }
 
 
- /* .paragraph::before{
-    content: ",,";
-    color: #8ed0e8;
-    font-size: 6rem;
-    z-index: 0;
- } */
+ .paragraph::before{
+    content: "„";
+    color: #6AC2E3;
+    font-size: 25rem;
+    position: absolute;
+    left: 0;
+    top: -10rem;
+    display: block;
+    z-index: -1;
+    width: 10rem;
+ }
